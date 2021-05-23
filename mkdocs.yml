@@ -18,5 +18,5 @@ pages:
     
     
 - About:
-    - 'About': 'about.md'
+    - 'About': 'docs/about.md'
     - 'Release Notes': 'about/release-notes.md'
