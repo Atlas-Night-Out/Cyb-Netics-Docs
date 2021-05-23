@@ -1,6 +1,6 @@
 site_name: Cyb Netics Docs
 
-Nav:
+nav:
 - Home: 'index.md'
 
 - Nightscout :
