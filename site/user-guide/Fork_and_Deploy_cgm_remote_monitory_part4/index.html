@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Fork and Deploy cgm remote monitory Part 4 - Cyb Netics Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Cyb Netics Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nightscout <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Specifications/" class="dropdown-item">Specifications</a>
+</li>
+                                    
+<li>
+    <a href="../Nightscout_usefull_Information/" class="dropdown-item">Nightscout usefull Information</a>
+</li>
+                                    
+<li>
+    <a href="../Setting_up_Github_Account_part1/" class="dropdown-item">Setting up GitHub Account Part 1</a>
+</li>
+                                    
+<li>
+    <a href="../Setting_up_Heroku_Account_part2/" class="dropdown-item">Setting up Heroku Account Part 2</a>
+</li>
+                                    
+<li>
+    <a href="../Setting_up_Atlas_Account_part3/" class="dropdown-item">Setting up Atlas Account Part 3</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Fork and Deploy cgm remote monitory Part 4</a>
+</li>
+                                    
+<li>
+    <a href="../Nightscout_Plugins/" class="dropdown-item">Nightscout Plugins</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">NS-Update <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Nightscout_update/" class="dropdown-item">Nightscout Update</a>
+</li>
+                                    
+<li>
+    <a href="../Redeploying%20your%20repository/" class="dropdown-item">Redeploying the repository</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/" class="dropdown-item">About</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Setting_up_Atlas_Account_part3/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../Nightscout_Plugins/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#welcome-to-the-diabetic-way" class="nav-link">Welcome to The Diabetic way</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#fork-and-deploy-cgm-remote-monitory-part-4" class="nav-link">Fork and Deploy cgm remote monitory Part 4  </a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-the-diabetic-way">Welcome to The Diabetic way</h1>
+<p>For full Website content visit <a href="https://www.thediabeticway.co.uk/index.php/en/">The Diabetic Way</a>.
+<br>
+<br></p>
+<h2 id="fork-and-deploy-cgm-remote-monitory-part-4"><span style="color:#111478">Fork and Deploy cgm remote monitory Part 4 </span> <br></h2>
+<p><br>
+<img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/Fork_and_Deploy_cgm_remote_monitory_Part_4t_860x462.jpg" Setting up Atlas Part 3"/></p>
+<p><br><br />
+<font size="4"> 
+1. Hopfully you should now have 3 pages opened in your browser: <span style="background-color: #FFFF00"><strong>Heroku, Atlas, and Github,</strong></span> Make sure you are logged-in on each one (i.e. important) before you continue.</p>
+<ol>
+<li>
+<p><a href="https://github.com/nightscout/cgm-remote-monitor" target="_blank" title="Nightscout Release Versions">Click Here</a> or goto https://github.com/nightscout/cgm-remote-monitor, to open a new GitHub page. Click the on <span style="background-color: #FFFF00"><strong>Fork</strong></span> icon in the top right
+   <img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/1_fork.jpg"/></p>
+</li>
+<li>
+<p>Wait for a moment
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/forking.jpg" title="WAIT until compleate"/>
+</a></p>
+</li>
+<li>
+<p>Scroll down the page and click <span style="background-color: #FFFF00"><strong>Deploy to Heroku</strong></span> 
+   <img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/Deploy_to_Heroku.jpg"title="This deploys to Heroku Account"/></p>
+</li>
+<li>
+<p>Enter in your Heroku account a site name: invent a name you would like to use or see your BG in on the internet. Confirm that the name is available.
+ <img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/site_name.jpg"title="Give yourself a App name"/></p>
+</li>
+<li>
+<p>Don’t change the region.</p>
+</li>
+<li>
+<p><span style="background-color: #FFFF00"><strong>Scroll down</strong></span> and setup the following variables: You can come back to these later later by going to settings and config Var!
+<img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/API_SECRET_Required2.jpg"title="Give yourself a API Secret Passwod"/>
+     <iframe width="800" height="415" src="https://www.youtube.com/embed/65KI5-3E_XM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <table width="1166" border="1" style="border-color: #000000; background-color: #ffffff;" cellpadding="1" cellspacing="1" height="98"></p>
+</li>
+</ol>
+<tbody>
+<tr style="height: 16px;">
+<td style="width: 1158px; border-color: #000000; background-color: #db4e12;" fff=""><span style="font-size: 14pt;"><strong><span style="color: #ffffff;">Note!</span></strong></span></td>
+</tr>
+<tr style="height: 56.4063px;">
+<td style="width: 1158px; border-color: #000000;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14pt;">The API_SECRET is the main password allowing full access to your Nightscout site. Make sure its secure (mix uppercase and lowercase letters, plus digits) and do no not share it publicly. If you think you exposed it by mistake, it is recommended that you change it.<br>
+ If you don’t have Automatic Deploys on yet, or aren’t sure, run through these steps below!</span></td>
+</tr>
+</tbody>
+<p></table>
+7. <span style="background-color: #FFFF00"><strong>API_SECRET</strong></span> will be your Nightscout site password, it needs to be at least 12 characters long and <span style="background-color: #FFFF00"><strong>you should NOT use spaces if you use @ or ! symbolyou should NOT use spaces if you use @ or ! symbols</strong></span> remember you will probably need to express them using Percent encoding in your uploader and downloader apps. If you're not sure on how to do this, it is recommended to use only letters (uppercase + lowercase) and digits.
+<img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/API_SECRET_Required1.jpg"title="Give yourself a API Secret Passwod"/><br>
+8. If you <span style="background-color: #FFFF00"><strong>want to link your Dexcom Share account</strong></span> as a data source, complete the following lines:
+<img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/bridge_for_Dexcom_share.jpg"title=" Link your Dexcom Share Account "/><br></p>
+<table width="1166" border="1" style="border-color: #000000; background-color: #ffffff;" cellpadding="1" cellspacing="1" height="98">
+<tbody>
+<tr style="height: 16px;">
+<td style="width: 1158px; border-color: #000000; background-color: #FF0000;" fff=""><span style="font-size: 14pt;"><strong><span style="color: #ffffff;">Warning!  Common Errors</span></strong></span></td>
+</tr>
+<tr style="height: 56.4063px;">
+<td style="width: 1158px; border-color: #000000;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14pt;">MOST COMMON ERRORS
+
+The BRIDGE_PASSWORD and BRIDGE_USER_NAME are NOT visible from within your Dexcom app or online account. These values are what you entered into your Dexcom mobile app when you logged into that app for the VERY FIRST time. The BRIDGE_USER_NAME is not an email address. The most common error on initial Nightscout setups is that people incorrectly use an old account or an old password. To test your username and password, go to Dexcom's Clarity page (check here <a href="https://clarity.dexcom.com/" target="_blank" title="Dexcom USA Account">See Here</a> for USA accounts and <a href="https://clarity.dexcom.eu/" target="_blank" title="Dexcom EU Account"> Here</a> here for the others) and try logging in to your Dexcom account. If your account info isn't valid, or you don't see any data in your Clarity account... you need to figure out your actual credentials before moving ahead.
+</span></td>
+</tr>
+</tbody>
+</table>
+<p><br>
+9. If you want to link your <span style="background-color: #FFFF00"><strong>Care Link account</strong></span> as a data source (currently not functional with Heroku), complete the following lines:<br>
+<img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/mmconnect.jpg"title="Care Link Account"/>
+<br>
+10. Select the units you’re using in <span style="background-color: #FFFF00"><strong>DISPLAY_UNITS</strong></span> the acceptable choices are <span style="background-color: #FFFF00"><strong>mg/dl or mmol/L</strong></span> (or just <span style="background-color: #FFFF00"><strong>mmol</strong></span> when entering it).
+<img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/display_units.jpg"title="Display Units"/><br>
+In <span style="background-color: #FFFF00"><strong>my case I used mmol</strong></span> <img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/display_unit_EU.jpg"title="Display Units"/><br>11. In <span style="background-color: #FFFF00"><strong>ENABLE,</strong></span> copy and paste the following Plugins below <span style="background-color: #FFFF00"><strong>(separated by a space)</strong></span> so that won't have to think about which you want now</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Plugins</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/enable.jpg"title="Plugins you can add to enable"/><br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Plugins</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">careportal basal dbsize rawbg iob maker cob bwp cage iage sage boluscalc pushover treatmentnotify loop pump profile food openaps bage alexa override speech cors</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table width="1166" padding="0.35rem" border="1" style="border-color: #000000; background-color: #ffffff;" cellpadding="0" cellspacing="0" height="0">
+<tbody>
+<tr style="height: 0px;">
+<td style="width: 1158px; border-color: #000000; background-color: #5B9BD5;" fff=""><span style="font-size: 14pt;"><strong><span style="color: #ffffff;">Enable Words</span></strong></span></td>
+</tr>
+<tr style="height: 0px;">
+<td style="width: 1158px; border-color: #000000;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14pt;">You find more information about the ENABLE on the: Nightscout Plugin Page <a href="http://127.0.0.1:8000/user-guide/Nightscout_Plugins/" target="_blank" title="Nightscout Plugin link">Here</a> </span></td>
+</tr>
+</tbody>
+</table>
+<p><br>
+11. Now you need the connection string you defined during the Atlas cluster creation (as the example below, but not the string below). Copy and paste it in the MONGODB_URI variable field.<br>
+12. I will give you an example about this below:</p>
+<p><br>
+   1. The 1st is your Atlas Account you gave yourself a <span style="background-color: #FFFF00">User Name</span>
+ <br>
+   2. Then you made a <span style="background-color: #FFFF00">Database Password</span>
+<br>
+   3. And lastly you made a <span style="background-color: #FFFF00">Database Name</span>
+<br>
+    <br>
+13. oijhou
+</font>
+<br><p>
+username: <input type="text" id="username" value="click here, delete and put your own " size="32">  Eg username: <input type="text" id="egusername" value="Dave" size="32"><br></p>
+<p>Database password: <input type="text" id="dbpassword" value="click here,delete and put your own" size="31"> Eg Database password: <input type="text" id="egdbpassword" value="   Mypassword1234" size="20"><br>
+<br>
+Database Name: <input type="text" id="dbname" value="click here, delete and put your own " size="32"> E.g Database Name: <input type="text" id="egdbname" value=" Davesdatabase " size="20><br>output: <input type="text" id="output" value="click here, delete and put your own " size="32">
+<br>
+<br></p>
+<p></p>
+
+<p>jhgkjhl
+dfdfsfdsfdsf
+sdgfdsgfdsfdsfds
+sdfsffsdfdsfsdfsdf
+sdfsfsdffffffffffffffffffffff
+<br /></p>
+<p>Field1: <input type="text" id="field1" value="Hello World!">
+Field3: <input type="text" id="field3"><br><br>
+<button onclick="myFunction()">Copy Text</button></p>
+<script>
+function myFunction() {
+  document.getElementById("field3").value = document.getElementById("field1").value;
+}
+</script>
+
+<script>
+function myFunction() {
+  document.getElementById("field3").value = document.getElementById("field1","field2").value;
+}
+</script>
+
+<p><font size="4"></p>
+<p></font></p>
+<!--  
+
+  mkdocs.yml    # The configuration file.
+    docs/
+    index.md  # The documentation homepage.
+       ...       # Other markdown pages, images and other files.
+
+
+
+<a href="http://nightscout.github.io/pages/update-fork/" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Nightscout/Time to Update Nightscout.png" title="Update Tool"/></a>      
+
+
+adding  Yellow Hightligher!!!!!!!!  
+<span style="background-color: #FFFF00">**Marked text**</span>
+
+
+<a>
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Nightscout/Time to Update Nightscout.png" title="Update Tool"/></a>  
+
+
+
+
+Adding a image
+<a href="https://www.youtube.com/watch?v=MFsbm45b6YY" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Nightscout/nightscout version_14.06.jpg" title="Version of Nightscout Video"/>
+</a>
+
+
+Adding Video
+
+<iframe width="850" height="415" src="https://www.youtube.com/embed/MFsbm45b6YY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Note
+**Note:** a note is something that needs to be mentioned but is apart from the context.
+
+
+List
+This is a regular paragraph.
+
+Paragraph:
+
+1. **Now Open another tab**  to make a Mongodb Atlas** Account: <a href="https://www.mongodb.com/cloud/atlas" target="_blank" title="Click Start Free">See Here</a> 
+  and **click** Start Free
+ <img width="auto" height="auto" border="0" align="center"  src="/img/Atlas/MongoDB Atlas start free.jpg"Click Start"/>
+   2. Sub item two
+   3. Sub item three
+2. Item two
+
+
+
+font size
+<font size="4">
+
+</font>
+
+
+
+Table
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+
+--></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,6 +1,6 @@
 site_name: Cyb Netics Docs
 
-pages:
+nav:
 - Home: 'index.md'
 
 - Nightscout :
@@ -19,4 +19,4 @@ pages:
     
 - About:
     - 'About': 'about.md'
-    - 'Release Notes': 'about/release-notes.md'
+    

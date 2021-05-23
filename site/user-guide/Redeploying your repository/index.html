@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Redeploying the repository - Cyb Netics Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Cyb Netics Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Nightscout <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Specifications/" class="dropdown-item">Specifications</a>
+</li>
+                                    
+<li>
+    <a href="../Nightscout_usefull_Information/" class="dropdown-item">Nightscout usefull Information</a>
+</li>
+                                    
+<li>
+    <a href="../Setting_up_Github_Account_part1/" class="dropdown-item">Setting up GitHub Account Part 1</a>
+</li>
+                                    
+<li>
+    <a href="../Setting_up_Heroku_Account_part2/" class="dropdown-item">Setting up Heroku Account Part 2</a>
+</li>
+                                    
+<li>
+    <a href="../Setting_up_Atlas_Account_part3/" class="dropdown-item">Setting up Atlas Account Part 3</a>
+</li>
+                                    
+<li>
+    <a href="../Fork_and_Deploy_cgm_remote_monitory_part4/" class="dropdown-item">Fork and Deploy cgm remote monitory Part 4</a>
+</li>
+                                    
+<li>
+    <a href="../Nightscout_Plugins/" class="dropdown-item">Nightscout Plugins</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">NS-Update <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../Nightscout_update/" class="dropdown-item">Nightscout Update</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Redeploying the repository</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../about/" class="dropdown-item">About</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../Nightscout_update/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../about/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#welcome-to-the-diabetic-way" class="nav-link">Welcome to The Diabetic way</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#redeploying-your-repository" class="nav-link">Redeploying your repository</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#step-1-cleaning-up-github" class="nav-link">Step 1. Cleaning up Github</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#step-2-now-deploy-in-heroku" class="nav-link">Step 2 - Now Deploy in Heroku</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-the-diabetic-way">Welcome to The Diabetic way</h1>
+<p>For full Website content visit <a href="https://www.thediabeticway.co.uk/index.php/en/">The Diabetic Way</a>.</p>
+<h2 id="redeploying-your-repository">Redeploying your repository</h2>
+<p><br></p>
+<h1 id="step-1-cleaning-up-github">Step 1. Cleaning up Github</h1>
+<p><br></p>
+<table width="1166" border="1" style="border-color: #000000; background-color: #ffffff;" cellpadding="1" cellspacing="1" height="98">
+<tbody>
+<tr style="height: 16px;">
+<td style="width: 1158px; border-color: #000000; background-color: #5B9BD5;" fff=""><span style="font-size: 14pt;"><span style="color: #ffffff;">Note!  If you prefer video, see below</span></span></td>
+</tr>
+<tr style="height: 56.4063px;">
+<td style="width: 1158px; border-color: #000000;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14pt;">
+<iframe width="850" height="415" src="https://www.youtube.com/embed/mk2dyzz4r28" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><a href=" https://github.com/login" target="_blank" title="Github Log into Account">Click Here</a> to log into at GitHub: </li>
+<li>Enter your username and password. And Click Sign in.</li>
+</ul>
+<p><a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Github/signintogithub.jpg" title="Log into Github Account"/>
+</a></p>
+<ul>
+<li>Select your own cgm-remote-monitor project (not nightscout/cgm-remote-monitor)</li>
+</ul>
+<p><a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Github/your-own-cgm-remote-monitor-project.jpg" title="Select your own cgm-remote-monitor"/>
+</a></p>
+<ul>
+<li>Select the settings at th top right</li>
+</ul>
+<p><a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Github/settings.jpg" title="Select settings"/>
+</a></p>
+<ul>
+<li>Scroll down to Danger zone and click Delete the repository <code>(Don't worry)</code></li>
+</ul>
+<p><a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Github/deleterepository.jpg" title="Delete this repository
+"/>
+</a></p>
+<ul>
+<li>
+<p>Copy and paste your full repository name to confirm (make sure no spaces)then click I understand...
+<a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Github/reenterrepository-name.jpg" title="Confirm by adding your repository"/>
+</a></p>
+</li>
+<li>
+<p>Now <a href=" https://github.com/nightscout/cgm-remote-monitor" target="_blank" title="Update Tool">-- Click Here  --</a> to go to the official repository <span style="background-color: #FFFF00"><br></p>
+</li>
+<li>
+<p>Click on Fork</p>
+</li>
+</ul>
+<p><a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Github/Fork.jpg" title="Select Fork"/>
+</a>
+*  Wait for it to complete then leave GitHub open.</p>
+<p><a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Github/forking nightscout.jpg" title="Select Fork"/>
+</a></p>
+<h1 id="step-2-now-deploy-in-heroku">Step 2 - Now Deploy in Heroku</h1>
+<p><br></p>
+<ul>
+<li>Log into Heroku <a href=" https://id.heroku.com/login" target="_blank" title="logging into Heroku">-- Click Here  --</a> <br>
+<br></li>
+<li>Select your App (see below )<span style="background-color: #FFFF00"> I will also note here that having multiple Apps for this setup can cause issues on updating the stack!</span> <code>( I will also note here multiple Apps for this setup can cause issues on updating the stack!)</code></li>
+</ul>
+<p><a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Heroku/SelectingApp.jpg" title="Selecting Heroku App"/>
+</a></p>
+<ul>
+<li>Then Click on <span style="background-color: #FFFF00"> Deploy</span> 
+ <a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Heroku/clickondeploy.jpg" title="Deploy"/>
+</a></li>
+<li>Verify Heroku is connected to GitHub, if not, click and Connect it to your GitHub Account  -<span style="background-color: #FFFF00"> Somtimes you may have issues and need to disconnect from Github and then re connect back and then add your repo again Type cgm-remote-monitor and click Search then click Connect!</span><br />
+ <a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Heroku/github connected.jpg" title="Github connected"/>
+  </a></li>
+</ul>
+<table width="1166" border="1" style="border-color: #000000; background-color: #ffffff;" cellpadding="1" cellspacing="1" height="98">
+<tbody>
+<tr style="height: 16px;">
+<td style="width: 1158px; border-color: #000000; background-color: #5B9BD5;" fff=""><span style="font-size: 14pt;"><span style="color: #ffffff;">Note!  If you prefer video, see below</span></span></td>
+</tr>
+<tr style="height: 56.4063px;">
+<td style="width: 1158px; border-color: #000000;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14pt;">
+<iframe width="850" height="415" src="https://www.youtube.com/embed/5S2lcc5XY_g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </span></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Or if Heroku is not connected to GitHub, scroll down and click Connect to GitHub, if a popup window opens and requires authorization, click Authorize Heroku</li>
+<li>Scroll down to the bottom of the page, make sure to select the <span style="background-color: #FFFF00">master branch</span>  and then click <span style="background-color: #FFFF00"> Deploy Branch</span>
+  <a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Heroku/masterthendeploy.jpg" title="Select master then Deploy Branch"/>
+</a></li>
+<li>Build will start, do not interfere and wait for completion. It can take a while <span style="background-color: #FFFF00">approximately around 10 minutes Do not Interrupt the process</span>  has it can lead to a broken site and you'll need to restart again.
+  <a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Heroku/Build-will-start.jpg" title="Build will start and information will scroll in the log window"/>
+</a></li>
+<li>Wait until the deploy process completes and click View if nothing happens click Manage App then upper right Open App
+<a href="" target="_blank">
+  <img width="auto" height="auto" border="0" align="center"  src="/img/Heroku/view-App.jpg" title="Delect View now that the deploy process is complete"/>
+</a></li>
+<li>Your site will open and  it should be at the latest version on your Nightscout Site</li>
+<li><span style="background-color: #FFFF00">You're Finished!</span> </li>
+<li>Head over to your Nightscout site and check its updated!</li>
+</ul>
+<table width="1166" border="1" style="border-color: #000000; background-color: #ffffff;" cellpadding="1" cellspacing="1" height="98">
+<tbody>
+<tr style="height: 16px;">
+<td style="width: 1158px; border-color: #000000; background-color: #5B9BD5;" fff=""><span style="font-size: 14pt;"><span style="color: #ffffff;">Head over to your Nightscout site and check if updated!</span></span></td>
+</tr>
+<tr style="height: 56.4063px;">
+<td style="width: 1158px; border-color: #000000;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14pt;">
+<iframe width="850" height="415" src="https://www.youtube.com/embed/MFsbm45b6YY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </span></td>
+</tr>
+</tbody>
+</table>
+
+<!--
+
+<table width="1166" border="1" style="border-color: #000000; background-color: #ffffff;" cellpadding="1" cellspacing="1" height="98">
+<tbody>
+<tr style="height: 16px;">
+<td style="width: 1158px; border-color: #000000; background-color: #5B9BD5;" fff=""><span style="font-size: 14pt;"><span style="color: #ffffff;">Note!  If you prefer video, see below</span></span></td>
+</tr>
+<tr style="height: 56.4063px;">
+<td style="width: 1158px; border-color: #000000;"><span style="font-family: tahoma, arial, helvetica, sans-serif; font-size: 14pt;">
+<iframe width="850" height="415" src="https://www.youtube.com/embed/gUEqZAfPEZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </span></td>
+</tr>
+</tbody>
+</table>
+
+
+--></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
