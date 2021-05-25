@@ -6,7 +6,7 @@ For full Website content visit [The Diabetic Way](https://www.thediabeticway.co.
 ## <span style="color:#111478">Fork and Deploy cgm remote monitory Part 4 </span> <br> 
 
 <br>
-<img width="auto" height="auto" border="0" align="center"  src="/img/Fork and Deploy cgm remote monitory Part 4/Fork_and_Deploy_cgm_remote_monitory_Part_4t_860x462.jpg" Setting up Atlas Part 3"/>
+<img width="auto" height="auto" border="0" align="center"  src="img/Fork and Deploy cgm remote monitory Part 4/Fork_and_Deploy_cgm_remote_monitory_Part_4t_860x462.jpg" Setting up Atlas Part 3"/>
 
 
    
